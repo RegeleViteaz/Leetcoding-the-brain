@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class Problem_3174_Clear_Digits {
     public static void main(String[] args) {
         String s = "abc";
@@ -8,11 +5,10 @@ public class Problem_3174_Clear_Digits {
         String c = "a3b4d5";
         String d = "a3b4d55";
 
-
-        System.out.println("" + clearDigits(s));
-        System.out.println("" + clearDigits(b));
-        System.out.println("" + clearDigits(c));
-        System.out.println("" + clearDigits(d));
+        System.out.println(clearDigits(s));
+        System.out.println(clearDigits(b));
+        System.out.println(clearDigits(c));
+        System.out.println(clearDigits(d));
 
     }
 
