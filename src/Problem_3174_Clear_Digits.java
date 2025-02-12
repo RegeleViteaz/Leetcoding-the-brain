@@ -1,3 +1,6 @@
+import java.util.ArrayDeque;
+import java.util.Stack;
+
 public class Problem_3174_Clear_Digits {
     public static void main(String[] args) {
         String s = "abc";
@@ -13,6 +16,9 @@ public class Problem_3174_Clear_Digits {
     }
 
     public static String clearDigits(String s) {
+        /*
+
+        NOT OPTIMAL AS IT USES O(N X M) TIME COMPLEXITY AND O(N) SPACE COMPLEXITY
 
         StringBuilder sb = new StringBuilder(s);
 
@@ -28,5 +34,25 @@ public class Problem_3174_Clear_Digits {
             }
         }
         return sb.toString();
+
+         */
+
+        // Uses StrinBuilder in a Stack data structure format
+        StringBuilder stack = new StringBuilder();
+        for (char c : s.toCharArray())
+        {
+            if (Character.isDigit(c))
+            {
+                if (!stack.isEmpty())
+                {
+                    stack.deleteCharAt(stack.length() - 1);
+                }
+            }
+            else
+            {
+                stack.append(c);
+            }
+        }
+        return stack.toString();
     }
 }
