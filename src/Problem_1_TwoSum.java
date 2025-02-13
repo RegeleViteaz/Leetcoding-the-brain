@@ -15,11 +15,8 @@ public class Problem_1_TwoSum {
             }
         }
         return nums;
-         */
 
-        /**
-         * Two-Pass Hash Table
-
+        === Two-Pass Hash Table ===
 
         HashMap<Integer, Integer> map = new HashMap<>();
 
@@ -43,6 +40,7 @@ public class Problem_1_TwoSum {
         Therefore, the condition map.get(complement) != i will always be true, and including it is redundant.
          */
 
+        // === One-Pass Hash Table ===
         HashMap<Integer, Integer> map = new HashMap<>();
 
         for(int i = 0; i < nums.length; i++){
